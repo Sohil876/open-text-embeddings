@@ -1,15 +1,16 @@
 {
     "$schema": "https://openapi.vercel.sh/vercel.json",
+    "version": 2,
     "builds": [
         {
-            "src": "server.py",
+            "src": "api/embeddings.py",
             "use": "@vercel/python"
         }
     ],
     "routes": [
         {
-            "src": "/v1/embeddings",
-            "dest": "server.py"
+            "src": "/api/embed",
+            "dest": "api/embeddings.py"
         }
     ]
 }
